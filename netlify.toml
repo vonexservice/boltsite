@@ -1,0 +1,237 @@
+# ============================================================
+# netlify.toml — Vonex Business Solutions
+# ============================================================
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# ============================================================
+# PRERENDER PLUGIN — all routes listed so bots get full HTML
+# ============================================================
+[[plugins]]
+  package = "netlify-plugin-prerender"
+
+  [plugins.inputs]
+    prerender = [
+      "/",
+      "/services",
+      "/brands",
+      "/ink-toner",
+      "/lease-rental",
+      "/repairs",
+      "/managed-print",
+      "/office-equipment",
+      "/it-managed-services",
+      "/kyocera-authorized-dealer-saskatoon",
+      "/kyocera-managed-print-services-saskatoon",
+      "/printer-repair-saskatoon",
+      "/copier-service-saskatoon",
+      "/hp-printer-service-saskatoon",
+      "/lexmark-printer-service-saskatoon",
+      "/printer-maintenance-contract-saskatoon",
+      "/printer-repair-regina",
+      "/copier-service-regina",
+      "/toner-supplier-regina",
+      "/about",
+      "/contact",
+      "/blog",
+      "/blog/signs-business-needs-managed-print-services",
+      "/blog/emergency-printer-repair-guide",
+      "/blog/law-firm-printer-leasing-managed-print",
+      "/blog/medical-clinic-printer-leasing-managed-print",
+      "/blog/smb-printer-leasing-managed-print-guide",
+      "/blog/konica-minolta-vs-hp-printer-comparison",
+      "/blog/reduce-printing-costs-saskatchewan-business",
+      "/blog/complete-printer-maintenance-guide",
+      "/blog/toner-vs-ink-business-guide"
+    ]
+
+# ============================================================
+# REDIRECTS — order matters, first match wins
+# ============================================================
+
+# Force HTTPS
+[[redirects]]
+  from   = "http://vonex.ca/*"
+  to     = "https://vonex.ca/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from   = "http://www.vonex.ca/*"
+  to     = "https://vonex.ca/:splat"
+  status = 301
+  force  = true
+
+# Strip www
+[[redirects]]
+  from   = "https://www.vonex.ca/*"
+  to     = "https://vonex.ca/:splat"
+  status = 301
+  force  = true
+
+# Old Kyocera slug (capital S) → correct slug (lowercase saskatoon)
+# Anyone who bookmarked or linked the old URL lands correctly
+[[redirects]]
+  from   = "/kyocera-authorized-dealer-Saskatchewan"
+  to     = "/kyocera-authorized-dealer-saskatoon"
+  status = 301
+
+# Strip trailing slashes
+[[redirects]]
+  from = "/services/"
+  to   = "/services"
+  status = 301
+
+[[redirects]]
+  from = "/brands/"
+  to   = "/brands"
+  status = 301
+
+[[redirects]]
+  from = "/ink-toner/"
+  to   = "/ink-toner"
+  status = 301
+
+[[redirects]]
+  from = "/lease-rental/"
+  to   = "/lease-rental"
+  status = 301
+
+[[redirects]]
+  from = "/repairs/"
+  to   = "/repairs"
+  status = 301
+
+[[redirects]]
+  from = "/managed-print/"
+  to   = "/managed-print"
+  status = 301
+
+[[redirects]]
+  from = "/office-equipment/"
+  to   = "/office-equipment"
+  status = 301
+
+[[redirects]]
+  from = "/it-managed-services/"
+  to   = "/it-managed-services"
+  status = 301
+
+[[redirects]]
+  from = "/kyocera-authorized-dealer-saskatoon/"
+  to   = "/kyocera-authorized-dealer-saskatoon"
+  status = 301
+
+[[redirects]]
+  from = "/kyocera-managed-print-services-saskatoon/"
+  to   = "/kyocera-managed-print-services-saskatoon"
+  status = 301
+
+[[redirects]]
+  from = "/about/"
+  to   = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/contact/"
+  to   = "/contact"
+  status = 301
+
+[[redirects]]
+  from = "/blog/"
+  to   = "/blog"
+  status = 301
+
+[[redirects]]
+  from = "/blog/:slug/"
+  to   = "/blog/:slug"
+  status = 301
+
+[[redirects]]
+  from = "/printer-repair-saskatoon/"
+  to   = "/printer-repair-saskatoon"
+  status = 301
+
+[[redirects]]
+  from = "/copier-service-saskatoon/"
+  to   = "/copier-service-saskatoon"
+  status = 301
+
+[[redirects]]
+  from = "/hp-printer-service-saskatoon/"
+  to   = "/hp-printer-service-saskatoon"
+  status = 301
+
+[[redirects]]
+  from = "/lexmark-printer-service-saskatoon/"
+  to   = "/lexmark-printer-service-saskatoon"
+  status = 301
+
+[[redirects]]
+  from = "/printer-maintenance-contract-saskatoon/"
+  to   = "/printer-maintenance-contract-saskatoon"
+  status = 301
+
+[[redirects]]
+  from = "/printer-repair-regina/"
+  to   = "/printer-repair-regina"
+  status = 301
+
+[[redirects]]
+  from = "/copier-service-regina/"
+  to   = "/copier-service-regina"
+  status = 301
+
+[[redirects]]
+  from = "/toner-supplier-regina/"
+  to   = "/toner-supplier-regina"
+  status = 301
+
+# SPA fallback — must be last
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
+
+# ============================================================
+# HEADERS
+# ============================================================
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection       = "1; mode=block"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+    Permissions-Policy     = "camera=(), microphone=(), geolocation=()"
+
+# Hashed Vite assets — long cache
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Root images
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# HTML — never cache at edge
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

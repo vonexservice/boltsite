@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://vonex.ca/</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Core service pages -->
+  <url><loc>https://vonex.ca/services</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vonex.ca/repairs</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vonex.ca/managed-print</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vonex.ca/it-managed-services</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vonex.ca/printer-maintenance-contract-saskatoon</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Equipment & supplies -->
+  <url><loc>https://vonex.ca/office-equipment</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vonex.ca/ink-toner</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vonex.ca/lease-rental</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Brands -->
+  <url><loc>https://vonex.ca/brands</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Kyocera pages — FIX: slug is lowercase saskatoon matching App.tsx -->
+  <url><loc>https://vonex.ca/kyocera-authorized-dealer-saskatoon</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vonex.ca/kyocera-managed-print-services-saskatoon</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Brand-specific service pages -->
+  <url><loc>https://vonex.ca/hp-printer-service-saskatoon</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vonex.ca/lexmark-printer-service-saskatoon</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Saskatoon location pages -->
+  <url><loc>https://vonex.ca/printer-repair-saskatoon</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vonex.ca/copier-service-saskatoon</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Regina location pages -->
+  <url><loc>https://vonex.ca/printer-repair-regina</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vonex.ca/copier-service-regina</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vonex.ca/toner-supplier-regina</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- About / contact -->
+  <url><loc>https://vonex.ca/about</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vonex.ca/contact</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Blog index -->
+  <url><loc>https://vonex.ca/blog</loc><lastmod>2026-05-31</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Blog posts -->
+  <url><loc>https://vonex.ca/blog/law-firm-printer-leasing-managed-print</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vonex.ca/blog/medical-clinic-printer-leasing-managed-print</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vonex.ca/blog/smb-printer-leasing-managed-print-guide</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vonex.ca/blog/signs-business-needs-managed-print-services</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vonex.ca/blog/emergency-printer-repair-guide</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vonex.ca/blog/konica-minolta-vs-hp-printer-comparison</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vonex.ca/blog/reduce-printing-costs-saskatchewan-business</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vonex.ca/blog/complete-printer-maintenance-guide</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vonex.ca/blog/toner-vs-ink-business-guide</loc><lastmod>2026-05-31</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+</urlset>
